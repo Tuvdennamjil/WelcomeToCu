@@ -1,0 +1,142 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <meta name="description" content="CU web">
+        <link rel="stylesheet" type="text/css" href="style\style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <script src="js\home.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <input type="checkbox" id="check">
+            <nav>
+            
+                <a href="Home.html" class="icon"><img src="assets/svg/logo.svg" alt="CU" ></a>
+                
+                <div class="columnFlex">
+                    <div class="searchBox">
+                        <input type="search" placeholder="хайх">
+                        <span class="fa fa-search"></span>
+                    </div>
+                    <ul > 
+                        <li ><a href="Home.html">Нүүр Хуудас</a></li>
+                        <li ><a href="Product.html">Бүтээгдэхүүн</a></li>
+                    </ul> 
+                
+                </div>
+                <label for="check" class="bar" >
+                    <span class="fa fa-bars" id="bars"></span>
+                    <span class="fa fa-times" id="times"></span>
+                </label>
+                <button class="basketIcon" id="openBasketBtn"><img src="assets/svg/basket.svg" alt="Сагс"></button>
+                
+                
+            </nav>
+        </header>
+        <div class="slideshow-container">
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <img src="assets/png/frontImage1.png" alt="breakfast" class="frontImage" id="slideshow">
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+                <section class="suggest">
+                    <h3>Та өглөөний цайгаа ууж амжаагүй юм биш биз?</h3>
+                    <img src="assets/png/suggest1.png" alt="suggest1" class="top-left-image">
+                    <img src="assets/png/suggest2.png" alt="suggest2" class="bottom-right-image">
+                </section>
+
+
+        <section class="promotion">
+            <h2>Урамшуулал</h2>
+            <div class="products" id="promotionProducts">
+          
+            </div>
+            <button class="promotionButton">
+                Бүгдийг харах
+            </button>
+        </section>
+        <section class="Service">
+            <h2>Үйлчилгээ</h2>
+            <div class="carousel">
+            <img src="assets/svg/service1.svg" alt="service1">
+            <img src="assets/svg/service2.svg" alt="service2">
+            <img src="assets/svg/service3.svg" alt="service3">
+            <img src="assets/svg/service4.svg" alt="service4">
+            <img src="assets/svg/service5.svg" alt="service5">
+            <img src="assets/svg/service1.svg" alt="service1">
+            <img src="assets/svg/service2.svg" alt="service2">
+            <img src="assets/svg/service3.svg" alt="service3">
+            <img src="assets/svg/service4.svg" alt="service4">
+            <img src="assets/svg/service5.svg" alt="service5">
+            </div>
+            <button class="pre">&lt;</button>
+            <button class="nex">&gt;</button>
+        </section>
+        <section class="promotion">
+            <h2>Бүтээгдэхүүн</h2>
+            <div class="products", id="normalProducts">
+        
+            </div>
+            <button class="promotionButton">
+                Бүгдийг харах
+            </button>
+        </section>
+        <section id="detailedInformation">
+                <!-- End barani delgerngui orh ystoi -->
+        </section>
+
+        <!-- End sagsni code -->
+        <div class="backDrop"></div>
+    <!--Хажуугаас гарж ирэх сагс-->
+    <aside id="sideBasket" class="sideBasket">
+        <section class="basketContent">
+            <header class="basketHeader">
+                <img src="assets/svg/basket.svg" alt="" style="width: 30px">
+                <section class="headerTitle">
+                    <h2>Таны сагс</h2>
+                    <span id="itemNum">10</span>
+                </section>
+                <div class="removeItem">
+                    <span id="btnClose" class="btnClose">&times;</span>
+                </div>
+            </header>
+            <main class="basketScroll" id="basketItems">
+                <!--Эхний бараа-->
+                
+
+                          
+            </main>
+            <div class="basketActions">
+                <section class="total">
+                    <h3>Нийт үнэ:</h3>
+                    <h3><span class="totalPrice" id="totalPrice">47500</span>₮</h3>
+                </section>
+                <button>Төлбөр төлөх</button>
+            </div>
+        </section>
+    </aside> 
+        <footer>
+            <a href="Home.html"><img src="assets/svg/CUMongolia.svg" alt="CuHome"></a>
+            <div class="footerFlex">
+                <section>
+                    <h4>Холбоо барих</h4>
+                    <address>Хаяг: Монгол улс, Улаанбаатар хот, Хан уул дүүрэг, 10-р хороо, Хэт төв, Их монгол улсын гудамж 55, Хан уул CU салбар</address>
+                    <p>Утасны дугаар: <a href="tel:90302520">90302520</a>.</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/"><img src="assets/svg/facebook.svg" alt="facebook"></a></li>
+                        <li><a href="https://www.twitter.com/"><img src="assets/svg/twitter.svg" alt="twitter"></a></li>
+                        <li><a href="https://www.linkedin.com/"><img src="assets/svg/linkedin.svg" alt="linkedin"></a></li>
+                        <li><a href="https://www.dribbble.com/"><img src="assets/svg/dribbble.svg" alt="dribbble"></a></li>
+                    </ul>
+                </section>
+                <section>
+                        <h5>Copyright ©2023 CU Mongolia</h5>
+                        <p>“Team TYK” ххк</p>
+                </section>
+            </div>
+        </footer>
+    </body>
+    </html>

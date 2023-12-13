@@ -1,0 +1,772 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    font-family:'Roboto',sans-serif;
+    box-sizing:border-box;
+}
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav{
+    display:flex;
+    flex-direction:row;
+    background-color:#8101CF;
+    width:100%;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    
+}
+nav .icon{
+    cursor:pointer
+}
+nav .icon:hover{
+    scale:1.1;
+}
+.columnFlex{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    row-gap:10px;
+    margin-left:32px;
+    margin-right:32px;
+}
+
+ul{
+    list-style: none;
+    display:flex;
+    grid-gap:10px;
+    font-size:16px;
+    margin-right:auto;
+    margin-left:auto;
+   
+}
+#openBasketBtn{
+    border:none;
+    background-color:transparent ;
+    cursor:pointer;
+}
+ul li{
+    margin:0 2px;
+    cursor:pointer;
+    overflow-x:hidden;
+}
+
+ul li a{
+    display:flex;
+    text-decoration:none;
+    color:#FFFFFF;
+    font-size:12px;
+    font-weight:bolder;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:5px 10px;
+}
+ul li:hover a{
+    background:#FFFFFF;
+    color:#8101CF;
+    border-radius:10px;
+}
+nav .searchBox{
+    display:flex;
+    margin:auto 0;
+    height:35px;
+    line-height:35px;
+}
+nav .searchBox input{
+    border:none;
+    outline:none;
+    background:#FFFFFF;
+    height:100%;
+    padding:0 10px 0 10px;
+    font-size:16px;
+    width:450px;
+    border-radius:10px 0  0 10px;
+}
+nav .searchBox span{
+    color:#8101CF;
+    font-size:16px;
+    height:100%;
+    background:#FFFFFF;
+    padding:8px;
+    position:relative;
+    cursor:pointer;
+    border-radius:0 10px 10px 0;
+}
+nav .bar{
+    position:relative;
+    margin:auto;
+    display:none;
+}
+nav .bar span{
+    position:absolute;
+    color:#FFFFFF;
+    font-size:35px;
+}
+input[type="checkbox"]{
+    display:none;
+}
+
+footer {
+    display:flex;
+    flex-direction:row;
+    background-color: #FFFFFF;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    margin-bottom:0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left:10%;
+    margin-right:10%;
+}
+footer ul{
+    display:flex;
+    justify-content:center;
+}
+footer ul li{
+    padding: 0;
+}
+footer p{
+    padding: 10px;
+}
+footer .footerFlex{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+}
+footer img{
+    margin:10px;
+}
+/*nuuren zurag*/
+
+/*sanal bolgoh */
+.suggest {
+    display: flex;
+    position: relative;
+
+    align-items: center;
+    justify-content: space-between;
+}
+/*sanal bolgoh text*/
+.suggest h3 {
+    font-size: 40px;
+    width: 48%;
+    font-weight: bold;
+}
+
+/*sanal bolgoh zuun deed bulangiin hemjee*/
+.top-left-image{
+    max-width: 25%;
+    height: auto;
+    margin-bottom: 100px;
+}
+/*sanal bolgoh baruun dood bulangiin hemjee*/
+.bottom-right-image{
+    max-width: 25%;
+    height: auto;
+    margin-top: 100px;
+}
+/*body hesgiin padding*/
+.promotion, .Service,.suggest{
+    margin-right: 10%;
+    margin-left: 10%;
+}   
+/*buteegdehuunii undsen class herev hemjeenees hetervel ... haragduulna*/
+.product{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border: 5px solid #D9ABFD;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    
+}
+/*buteegdehuunii zurag*/
+.product img{ 
+    width: 100%;
+    border-radius: 10px;
+}
+/*buteegdehuunii jagsaalt gargah*/
+.products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 42px;
+    margin-top: 57px;
+}
+/* buteegdehuunii delgerengui medeelel */
+  .productExit{
+    position:absolute;
+    right:10px;
+    top:10px;
+    font-size:20px;
+    cursor:pointer;
+    
+  }
+  .productGet{ 
+      visibility:hidden;
+      opacity:0;
+      position:fixed;
+      top:25%;
+      right:25%;
+      left:25%;
+      background-color:#fff;
+      box-shadow:-10px 0 15px rgba(0,0,0,0.1);
+      transition: transform 0.5s ease-in-out;
+      z-index:2;
+      border-radius:10px;
+      display:grid;
+      grid-template-columns: repeat(2,1fr);
+      justify-content:center;
+      background:#FFFFFF;
+  }
+ 
+  .productGet.active{
+    visibility:visible;
+    opacity:1;
+  }
+  .productGet .productDetails{
+    display:flex;
+    flex-direction:column;
+    margin:10px;
+    align-items:flex-start;
+  }
+  .productDescription{
+      display:flex;
+      flex-direction:column;
+      justify-content: flex-end;
+      align-items:flex-start;
+      background:white;
+      padding:20px;
+      text-align:center;
+      border-radius:10px;
+      margin-left:10px;
+      margin-bottom:10px;
+  }
+  .productPrice{
+      display:flex;
+      gap:10px;
+  }
+  .productPrice .discountingPrice{
+    text-decoration:line-through;
+    font-size:26px;
+    margin-top:18px;
+    opacity:0.5;
+  }
+  .productGet figure{
+      display:flex;
+      align-items:center;
+      flex-direction:column;
+  }
+  .productGet figure img{
+      
+      border:2px solid #D9ABFD;
+      padding:5px;
+      border-radius:5px;
+      height:auto;
+      width:400;
+  }
+  .productGet figure span{
+    position:relative;
+    left:-128px;
+    top:22px;
+    background-color: #FF0000; 
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-weight: 600;
+    border-radius: 0px;
+    color: white;
+  }
+ 
+  .productGet .buttons{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+  }
+
+  .productGet .buttons  .b{
+    display: block; 
+    width: 120px;
+    border-radius: 15px; 
+    color: #FFFFFF; 
+    padding: 3px;
+    border:none;
+    background-color: #D9ABFD;
+    font-size: 20px;
+  }
+  .productGet .buttons .b-favouriteProduct{
+    display:flex;
+    flex-direction:row;
+    gap:5px;
+  }
+  .productGet .buttons .b-favouriteProduct .favouriteProduct{
+    color:#FFFFFF;
+    background-color:#D9ABFD;
+    border:none;
+    border-radius:15px;
+    width:30px;
+  }
+  .productGet .buttons .b-productAdd{
+    display:flex;
+    flex-direction:row;
+    gap:5px;
+  }
+  .productGet .buttons .productAdd *{
+      font-size:20px;
+      border:none;
+      border:1px solid #D9ABFD;
+      background-color:transparent;
+      padding-right:10px;
+      padding-left:10px;
+      border-radius:5px;
+  }
+
+
+/* hajuugaaas garj ireh sags */
+/*Backdrop*/
+.backDrop{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0.5);
+    z-index:1;
+    display:none;
+    opacity:0;
+}
+.backDrop.show{
+    display:block;
+    opacity:1;
+}
+
+/*basket */
+.sideBasket{
+    position:fixed;
+    top:0;
+    right:0;
+    width:350px;
+    height:100vh;
+    background-color:#fff;
+    box-shadow:-10px 0 15px rgba(0,0,0,0.1);
+    transform:translateX(110%);
+    transition: transform 0.5s ease-in-out;
+    z-index:2;
+}
+.sideBasket.open{
+    transform:translateX(0);
+}
+.basketContent{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+.basketHeader{
+    padding:16px;
+    border-bottom:1px solid #8101CF;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.headerTitle{
+    position: relative;
+}
+.headerTitle span{
+    position: absolute;
+    top: -5px;
+    right: -20px;
+    width:20px;
+    height: 20px;
+    background-color:#3FDA26;
+    border-radius: 50%;
+    color:#fff;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    font-size:11px;
+}
+.basketHeader .closeBtn{
+    font-size:32px;
+    cursor:pointer;
+    transition:transform 0.2s ease;
+}
+.basketHeader .closeBtn:hover{
+    transform: scale(1.1);
+}
+.sideBasket main{
+    flex:1;
+    overflow-x:hidden;
+}
+.basketItem{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin: 10px; 
+    padding: 10px; 
+    border: 1px solid #D9ABFD;
+    grid-gap: 10px; 
+    border-radius: 5px;
+}
+.itemDetails{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.itemDetails img{
+    width: 50px; 
+    height: 50px; 
+    margin-right: 10px; 
+    border-radius: 10px;
+}
+.itemDetails h3{
+    font-size: 12px;
+    margin-top: 10px; 
+    text-align: left;
+    margin-top:0;
+}
+.itemDetails p {
+    font-size: 12px;
+    text-align: left;
+}
+.removeItem{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:20px;
+    height:20px;
+    background-color:#D9ABFD;
+    border-radius:50%;
+    color:#FFFFFF;
+    user-select:none;
+    cursor:pointer;
+}
+.removeItem:hover{
+    scale:1.1;
+}
+.basketActions{
+    padding:16px 32px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+.basketActions .total{
+    margin-bottom:16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:14px;
+    font-weight:bold;
+}
+.basketActions button{
+    border:none;
+    background-color:#3FDA26;
+    color:#fff;
+    border-radius:15px;
+    padding:10px;
+    font-size:14px;
+    cursor:pointer;
+    margin-bottom:16px;
+}
+.basketScroll{
+    width:320px;
+    height:480px;
+    overflow:auto;
+    border-bottom:#D9ABFD 1px solid;
+    margin-right:0;
+}
+.basketScroll::-webkit-scrollbar{
+    width: 0;
+}
+
+/* filterin style */
+#filterType,#filterPrice,#filterButton{
+    color:#FFFFFF;
+    font-weight:bold;
+    background-color:#3FDA26;
+    border:none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding:5px;
+    border-radius:5px;
+    outline:none;
+    margin-top:10px;
+}
+.filters{
+    margin-left:10%;
+}
+#filterButton:hover{
+   background-color:#FFFFFF;
+   color:#3FDA26;
+}
+#filterPrice:hover{
+    background-color:#FFFFFF;
+    color:#3FDA26; 
+}
+#filterType:hover{
+    background-color:#FFFFFF;
+   color:#3FDA26;
+}
+/*hemjee zaah*/
+@media (max-width: 1120px) {
+    nav{
+        display:block;
+        padding:0;
+       
+    }
+    nav .icon{
+        display:inline-block;
+    }
+    nav .icon img{
+        width:100px;
+        height:auto;
+        margin:5px 0 0 20px;
+    }
+    nav .searchBox{
+        width:100%;
+        display:inline-flex;
+        justify-content:center;
+        margin-bottom:15px;
+    }
+    nav .searchBox input{
+        width:90%;
+    }
+    nav ul{
+        display:flex;
+        flex-direction:column;
+        background:#FFFFFF;
+        width:100%;
+        border-radius:10px;
+        height:0;
+        visibility:hidden;
+        transition:transform 0.3s ease-in-out;
+        margin-bottom:16px;
+    }
+    nav ul li{
+        text-align:center;
+        padding:15px;
+    }
+    nav ul li a{
+        color:#8101CF;
+        font-size:12px;
+        padding:10px;
+        display:block;
+    }
+    nav ul li a:hover{
+        background:#8101CF;
+        color:#FFFFFF;
+    }
+    nav .bar{
+        display:block;
+        position:absolute;
+        top:15px; 
+        right:70px;
+        cursor:pointer;
+    }
+    nav .bar #times{
+        display:none;
+    }
+    #check:checked ~nav .bar #times{
+        display:block;
+    }
+    #check:checked ~nav .bar #bars{
+        display:none;
+    }
+    #check:checked ~nav ul{
+        visibility:visible;
+        height:auto;
+    }
+    .basketIcon{
+        position:absolute;
+        top:10px;
+        right:70px;
+        color:#FFFFFF;
+    }
+    .basketIcon img{
+        width:50px;
+        height:auto;
+    }
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    body, p {
+        font-size: 14px; 
+    }
+    .suggest h3 {
+        font-size: 28px;
+    }
+    footer{
+        display:flex;
+        flex-direction:column;
+    }
+    footer .footerFlex{
+        display:flex;
+        flex-direction:column;
+    }
+    .productGet{
+        display: flex;
+        flex-direction:column;
+        align-items:left;
+        top:10%;
+        right:15%;
+        left:15%;
+    }
+    .productGet figure{
+        align-items:flex-start;
+    }
+    .productGet figure img{
+        width:250px;
+        height:auto;
+        border:5px solid #D9ABFD;
+    }
+    .productGet figure span{
+        position:relative;
+        left:0;
+        top:20px;
+      }
+}
+/*hemjee zaah*/
+@media (max-width: 550px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+    body, p {
+        font-size: 12px;
+    }
+    .suggest h3 {
+        font-size: 24px;
+    }
+
+}
+/*bugdiig harah*/
+.promotionButton {
+    display: block; 
+    margin: 0 auto; 
+    width: 200px;
+    border-radius: 15px; 
+    border:  #3FDA26; 
+    background-color: #3FDA26;
+    color: #FFFFFF; 
+    padding: 12px;
+    margin-top: 42px; 
+}
+/*hyamdraliin medeelel*/
+.product span {
+    position: absolute;
+    right: 20px;
+    background-color: #FF0000; 
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-weight: 600;
+    border-radius: 10px;
+    color: white;
+}
+/*buteegdehuunii ner*/
+.product h3{
+    color: black;
+    padding-top: 20px;
+    font-size: 20px;
+}
+/*sagslah button*/
+.product button{
+    display: block; 
+    width: 120px;
+    border-radius: 15px; 
+    color: #FFFFFF; 
+    padding: 3px;
+    border:  #D9ABFD; 
+    background-color: #D9ABFD;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+}
+/*uniig absoluteer bairshuulah*/
+.product strong{
+    position: absolute;
+    bottom: 55px;
+    right: 20px;
+    font-size: 20px;
+}
+/*padding hiih*/
+.product p{
+    padding-bottom: 65px;
+    padding-top: 6px;
+}
+/*hyamdraltai buteegdehuund ashiglagdana nemelt une*/
+.discount{
+    text-decoration: line-through;
+    position: absolute;
+    bottom: -10px;
+    font-size: 20px;
+
+}
+/*garchig*/
+.Service h2, .promotion h2{
+    text-align: center;
+    font-weight: bold;
+    color: #8101CF;
+    font-size: 48px;
+    font-weight: bold;
+}
+/*service scroll, center*/
+.Service{
+    margin-top: 20px;
+    width: 80%;
+    overflow: hidden;
+}
+/* uilchilgeenii zurag hemjee */
+.Service img{
+    padding: 20px;
+    width: 100%;
+    height: auto;  
+     object-fit: cover;
+}
+.carousel{
+    display: flex;
+    transition: transform 0.5s ease;
+    
+}
+.Service button {
+    cursor: pointer; /* Add cursor: pointer to indicate that the buttons are clickable */
+}
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: 3.5vw;
+    height: 3.5vw;
+    margin-top: -22px;
+    padding: 16px;
+    margin-left:16px ;
+    margin-right:16px ;
+
+}
+
+.prev {
+    left: 0;
+    border-radius: 100%;
+
+}
+
+.next {
+    right: 0;
+    border-radius: 100%;
+}
+.frontImage{
+    width: 100%;
+    height: auto;
+}
+
+
+

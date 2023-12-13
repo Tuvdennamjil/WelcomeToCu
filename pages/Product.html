@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <meta name="description" content="CU web">
+    <link rel="stylesheet" type="text/css" href="style\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="js\home.js" defer></script>
+</head>
+
+<body>
+ 
+    <header>
+        <input type="checkbox" id="check">
+        <nav>
+            
+            <a href="Home.html" class="icon"><img src="assets/svg/logo.svg" alt="CU" ></a>
+            
+            <div class="columnFlex">
+                <div class="searchBox">
+                    <input type="search" placeholder="хайх">
+                    <span class="fa fa-search"></span>
+                </div>
+                <ul > 
+                    <li ><a href="Home.html">Нүүр Хуудас</a></li>
+                    <li ><a href="Product.html">Бүтээгдэхүүн</a></li>
+                </ul> 
+            
+            </div>
+            <label for="check" class="bar" >
+                <span class="fa fa-bars" id="bars"></span>
+                <span class="fa fa-times" id="times"></span>
+            </label>
+            <button class="basketIcon" id="openBasketBtn"><img src="assets/svg/basket.svg" alt="Сагс"></button>
+            
+            
+        </nav>
+    </header>
+    <div class="filters">
+        <select id="filterType">
+            <option value="">All Types</option>
+            <option value="food">Food</option>
+            <option value="drink">Drink</option>
+          </select>
+          
+          <select id="filterPrice">
+            <option value="">All Prices</option>
+            <option value="0-3000">0₮ - 3000₮</option>
+            <option value="3001-6000">3001₮ - 6000₮</option>
+            <option value="6001-9000">6001₮ - 9000₮</option>
+            <!-- Add more price ranges as needed -->
+          </select>   
+          <button id="filterButton">Filter</button>
+    </div>
+    
+
+    <section class="promotion">
+        <h2>Бүтээгдэхүүн</h2>
+        <div class="products", id="Products">
+    
+        </div>
+
+    </section>
+    <section id="detailedInformation">
+            <!-- End barani delgerngui orh ystoi -->
+    </section>
+
+    <!-- End sagsni code -->
+    <div class="backDrop"></div>
+<!--Хажуугаас гарж ирэх сагс-->
+<aside id="sideBasket" class="sideBasket">
+    <section class="basketContent">
+        <header class="basketHeader">
+            <img src="assets/svg/basket.svg" alt="" style="width: 30px">
+            <section class="headerTitle">
+                <h2>Таны сагс</h2>
+                <span id="itemNum">10</span>
+            </section>
+            <div class="removeItem">
+                <span id="btnClose" class="btnClose">&times;</span>
+            </div>
+        </header>
+        <main class="basketScroll" id="basketItems">
+            <!--Эхний бараа-->
+            
+
+            
+            
+        </main>
+        <div class="basketActions">
+            <section class="total">
+                <h3>Нийт үнэ:</h3>
+                <h3><span class="totalPrice" id="totalPrice">47500</span>₮</h3>
+            </section>
+            <button>Төлбөр төлөх</button>
+        </div>
+    </section>
+</aside> 
+<footer>
+    <a href="Home.html"><img src="assets/svg/CUMongolia.svg" alt="CuHome"></a>
+    <div class="footerFlex">
+        <section>
+            <h4>Холбоо барих</h4>
+            <address>Хаяг: Монгол улс, Улаанбаатар хот, Хан уул дүүрэг, 10-р хороо, Хэт төв, Их монгол улсын гудамж 55, Хан уул CU салбар</address>
+            <p>Утасны дугаар: <a href="tel:90302520">90302520</a>.</p>
+            <ul>
+                <li><a href="https://www.facebook.com/"><img src="assets/svg/facebook.svg" alt="facebook"></a></li>
+                <li><a href="https://www.twitter.com/"><img src="assets/svg/twitter.svg" alt="twitter"></a></li>
+                <li><a href="https://www.linkedin.com/"><img src="assets/svg/linkedin.svg" alt="linkedin"></a></li>
+                <li><a href="https://www.dribbble.com/"><img src="assets/svg/dribbble.svg" alt="dribbble"></a></li>
+            </ul>
+            </section>
+            <section>
+                <h5>Copyright ©2023 CU Mongolia</h5>
+                <p>“Team TYK” ххк</p>
+            </section>
+    </div>
+    
+</footer>
+</body>
+</html>

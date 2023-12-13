@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CU pay">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/pay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="js/openBasket.js" defer></script>
+<body >
+    <section class="container">
+        <header>
+            <input type="checkbox" id="check">
+            <nav>
+            
+                <a href="Home.html" class="icon"><img src="assets/svg/logo.svg" alt="CU" ></a>
+                
+                <div class="columnFlex">
+                    <div class="searchBox">
+                        <input type="search" placeholder="хайх">
+                        <span class="fa fa-search"></span>
+                    </div>
+                    <ul > 
+                        <li ><a href="Home.html">Нүүр Хуудас</a></li>
+                        <li ><a href="Product.html">Бүтээгдэхүүн</a></li>
+                        <li ><a href="Promotion.html">Урамшуулал</a></li>
+                        <li ><a href='Location.html'>Байршил</a></li>
+                        <li ><a href='Contact.html'>Холбоо барих</a></li>
+                    </ul> 
+                
+                </div>
+                <label for="check" class="bar" >
+                    <span class="fa fa-bars" id="bars"></span>
+                    <span class="fa fa-times" id="times"></span>
+                </label>
+                <button class="basketIcon" id="openBasketBtn"><img src="assets/svg/basket.svg" alt="Сагс"></button>
+                
+                
+            </nav>
+        </header>
+        <main class="mainbody">
+            <article class="container1">
+                <h2>Захиалагчийн мэдээлэл</h2>
+                <form>
+                    <div class="rowflex" >
+                        <input type="text" name="firstName" placeholder="Нэр">
+                        <input type="text" name="lastName" placeholder="Овог">
+                    </div>
+                    <div class="columnflex">
+                        <input type="text" name="phoneNumber" placeholder="Утасны дугаар">
+                        <input type="email" name="eMail" placeholder="Цахим хаяг">
+                        <input type="text" name="address" placeholder="Таны хаяг">
+                        <textarea name="description" id="" cols="30" rows="6" placeholder="Тайлбар"></textarea>
+                    </div>
+                    
+                </form>
+                
+            </article>
+             <article class="container2">
+                <h2>Таны Захиалга</h2>
+                <section class="container2body">
+                    <header>
+                        <h3><span>Бүтээгдэхүүн</span></h3>
+                        <h3><span>Үнийн дүн</span></h3>    
+                    </header>                 
+                    <main class="subbody">
+                        <div class="rowflex">
+                            <p><span>Сармистай талх</span><span class="red"> x </span><span>1</span></p>
+                            <p><span> 5500₮</span></p>
+                        </div>
+                        <div class="rowflex">
+                            <p><span>Сармистай талх</span><span class="red"> x </span><span>1</span></p>
+                            <p><span> 5500₮</span></p>
+                        </div>
+                        <div class="rowflex">
+                            <p><span>Сармистай талх</span><span class="red"> x </span><span>1</span></p>
+                            <p><span> 5500₮</span></p>
+                        </div>
+                        <div class="rowflex">
+                            <p><span>Сармистай талх</span><span class="red"> x </span><span>1</span></p>
+                            <p><span> 5500₮</span></p>
+                        </div>
+                        <div class="rowflex">
+                            <p><span>Сармистай талх</span><span class="red"> x </span><span>1</span></p>
+                            <p><span> 5500₮</span></p>
+                        </div>
+                        <div class="rowflex">
+                            <p><span>Сармистай талх</span><span class="red"> x </span><span>1</span></p>
+                            <p><span> 5500₮</span></p>
+                        </div>
+                        <div class="rowflex">
+                            <p><span>Сармистай талх</span><span class="red"> x </span><span>1</span></p>
+                            <p><span> 5500₮</span></p>
+                        </div>
+                        <div class="rowflex">
+                            <p><span>Сармистай талх</span><span class="red"> x </span><span>1</span></p>
+                            <p><span> 5500₮</span></p>
+                        </div>
+                        <div class="rowflex">
+                            <p><span>Сармистай талх</span><span class="red"> x </span><span>1</span></p>
+                            <p><span> 5500₮</span></p>
+                        </div>
+                        <div class="rowflex">
+                            <p><span>Сармистай талх</span><span class="red"> x </span><span>1</span></p>
+                            <p><span> 5500₮</span></p>
+                        </div>          
+                    </main>
+                    <section class="rowflex">
+                        <h3> <span>Нийт дүн</span> </h3>
+                        <h3><span>47500₮</span></h3>
+                    </section>
+                    <div class="center">
+                        <div class="btn">
+                            <a href="Promotion.html" role="button">Төлбөр төлөх</a> 
+                        </div>
+                    </div> 
+                </section>
+            </article>
+        </main>
+    </section>
+    <!--Basket Backdrop-->
+    <div class="backDrop"></div>
+    <!--Хажуугаас гарж ирэх сагс-->
+    <aside id="sideBasket" class="sideBasket">
+        <section class="basketContent">
+            <header class="basketHeader">
+                <img src="assets/svg/basket.svg" alt="" style="width: 30px">
+                <section class="headerTitle">
+                    <h2>Таны сагс</h2>
+                    <span id="itemNum">10</span>
+                </section>
+                <div class="removeItem">
+                    <span id="btnClose" class="btnClose">&times;</span>
+                </div>
+            </header>
+            <main class="basketScroll" id="basketItems">
+                <!--Эхний бараа-->
+                <div class="basketItem">
+                    <div class="itemDetails">
+                        <img src="assets/png/product2.png" alt="Bingsu">
+                        <article >
+                            <h3>Бингсү</h3>
+                            <p><span>5</span> x <span class="nogoon">7500₮</span></p>
+                        </article>
+                    </div>
+                    <div class="removeItem">&times;</div>
+                </div>
+
+                
+                
+            </main>
+            <div class="basketActions">
+                <section class="total">
+                    <h3>Нийт үнэ:</h3>
+                    <h3><span class="totalPrice" id="totalPrice">47500</span>₮</h3>
+                </section>
+                <button>Төлбөр төлөх</button>
+            </div>
+        </section>
+    </aside> 
+    <footer>
+        <a href="Home.html"><img src="assets/svg/CUMongolia.svg" alt="CuHome"></a>
+        <section>
+        <h4>Холбоо барих</h4>
+        <address>Монгол улс, Улаанбаатар хот, Хан уул дүүрэг, 10-р хороо, Хэт төв, Их монгол улсын гудамж 55, Хан уул CU салбар</address>
+        <ul>
+            <li><a href="https://www.facebook.com/"><img src="assets/svg/facebook.svg" alt="facebook"></a></li>
+            <li><a href="https://www.twitter.com/"><img src="assets/svg/twitter.svg" alt="twitter"></a></li>
+            <li><a href="https://www.linkedin.com/"><img src="assets/svg/linkedin.svg" alt="linkedin"></a></li>
+            <li><a href="https://www.dribbble.com/"><img src="assets/svg/dribbble.svg" alt="dribbble"></a></li>
+        </ul>
+        </section>
+        <section>
+            <h5>Copyright ©2023 CU Mongolia</h5>
+            <p>“Team TYK” ххк</p>
+        </section>
+    </footer>
+</body>
+</html>

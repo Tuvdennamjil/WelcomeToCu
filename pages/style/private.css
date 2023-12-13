@@ -1,0 +1,38 @@
+
+        ul.container {
+            text-align: center;
+            display: table;
+            border-collapse: collapse;
+        }
+
+        li.header {
+            font-weight: bold;
+            background-color: #B9B9B9;
+        }
+
+        li.cell {
+            display: table-cell;
+            border: 1px solid #000;
+            padding: 8px;
+        }
+
+        ul.row {
+            display: table-row;
+            vertical-align: top;
+            border: 1px solid black;
+            padding: 0;
+            list-style: none;
+            font-size: 14px;
+        }
+        @media (max-width:1120px){
+            ul.row{
+                font-size: 12px;
+            }
+            
+        }
+        @media (max-width:550px){
+            ul.row{
+                font-size: 8px;
+            }
+            
+        }
